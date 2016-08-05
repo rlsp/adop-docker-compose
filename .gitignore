@@ -12,3 +12,4 @@ env.override.sh
 conf/provider/env.provider.*.sh
 *.seq
 .adop*
+mail-config
