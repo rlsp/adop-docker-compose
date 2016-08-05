@@ -79,11 +79,9 @@ NB. the instructions will also work in anywhere supported by [Docker Machine](ht
       Password: YOUR_PASSWORD
     ```
 1. Log in using the username and password you specified in the quickstart script:
-    ```
+```
 <INITIAL_ADMIN_USER> / <INITIAL_ADMIN_PASSWORD>
-    ```
-
-1. Update the docker-machine security group in the AWS console to permit inbound http traffic on port 80 (from the machine(s) from which you want to have access only), also UDP on 25826 and 12201 from 127.0.0.1/32.
+```
 
 # General Getting Started Instructions
 
@@ -195,15 +193,17 @@ Kibana 4 does not provide a configuration property that allow to define the defa
 - For the below drop-down select @timestamp for the Time-field name
 - Click on create button
 
-# User Feedback
+# User feedback
 
 ## Documentation
-Documentation can be found [on our GitHub Pages site](http://accenture.github.io/adop-docker-compose).
+Documentation can be found under the [`docker-library/docs` GitHub repo](https://github.com/docker-library/docs). Be sure to familiarize yourself with the [repository's `README.md` file](https://github.com/docker-library/docs/blob/master/README.md) before attempting a pull request.
 
 ## Issues
-If you have any problems with or questions about this project, please contact us through [Gitter](https://gitter.im/Accenture/ADOP) or a [GitHub issue](https://github.com/Accenture/adop-docker-compose/issues).
+If you have any problems with or questions about this image, please contact us through a [GitHub issue](https://github.com/Accenture/adop-docker-compose/issues).
 
 ## Contribute
-You are invited to contribute new features, fixes, or updates, large or small; we are always thrilled to receive pull requests, and do our best to process them as fast as we can. You can find more information in our [documentation](http://accenture.github.io/adop-docker-compose/docs/contributing/).
+You are invited to contribute new features, fixes, or updates, large or small; we are always thrilled to receive pull requests, and do our best to process them as fast as we can.
 
 Before you start to code, we recommend discussing your plans through a [GitHub issue](https://github.com/Accenture/adop-docker-compose/issues), especially for more ambitious contributions. This gives other contributors a chance to point you in the right direction, give you feedback on your design, and help you find out if someone else is working on the same thing.
+
+

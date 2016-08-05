@@ -1,0 +1,2 @@
+mail._domainkey	IN	TXT	( "v=DKIM1; k=rsa; "
+	  "p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDcVOuj5n+dJHRjhQk6ysDqSxBnMJWV0/ASFIjA/wSTMJ2v2otq6dsAxflLoSc0M+tKdAjBBSWcufa//ovlbsICDcVmY6NfIbYdQ+zg8vL1EBzbSQ9A7Ov76v6r3kvFMMv/GXwQGIXcdqTeGY0/Qe91p/Tw0jjCkEcDNco5ngzP7QIDAQAB" )  ; ----- DKIM key mail for ldap.adop.com
