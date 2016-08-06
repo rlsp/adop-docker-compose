@@ -53,7 +53,8 @@
     
     ## Deploy PDC extensions of ADOP
     # Set docker-compose overrides
-    COMPOSE_OVERRIDES='f docker-compose.yml -f compose/gitlab/docker-compose.yml -f compose/jenkins-aws-vars/docker-compose.yml -f compose/jenkins-ansible-slave/docker-compose.yml'
+    COMPOSE_OVERRIDES='-f docker-compose.yml -f compose/gitlab/docker-compose.yml -f compose/jenkins-aws-vars/docker-compose.yml -f compose/jenkins-ansible-slave/docker-compose.yml'
+    VOLUME_OVERRIDES='-f etc/volumes/local/default.yml' 
     # Deploy
     docker-compose ${COMPOSE_OVERRIDES} ${VOLUME_OVERRIDES} up -d
     ```
