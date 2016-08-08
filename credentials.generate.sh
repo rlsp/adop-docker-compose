@@ -1,6 +1,9 @@
 # Recursive function to check strength of user password
 function checkPassword {
- 
+
+  # Because it keeps breaking the CloudFormation run when someone doesn't read the description --
+  STRICT_PASSWORD_CHECKS=${STRICT_PASSWORD_CHECKS:-false}
+  if [[ ${STRICT_PASSWORD_CHECKS} == "true" ]] ; then 
     # Check to disallow usage of the word password
     if [[ "$1" = *"Password"* ]] || [[ "$1" = *"password"* ]]; then
         echo "You are not allowed to use a password containing the word password! Please enter another password: "
@@ -31,8 +34,14 @@ function checkPassword {
         read -s INITIAL_ADMIN_PASSWORD_PLAIN
         checkPassword $INITIAL_ADMIN_PASSWORD_PLAIN
     fi 
+
+		echo "Your provided password satisfies the strength criteria."
+
+  else
+		echo "WARNING!! STRICT_PASSWORD_CHECKS is disabled. It's your responsiblity that you might be using an insecure password."
+    echo "Set STRICT_PASSWORD_CHECKS=true, delete platform.secrets.sh, and source this script again to ensure that your password pass the standard. Thanks! - trustworthy shell"
+  fi  
     
-    echo "Your provided password satisfies the strength criteria."
  
 }
  
