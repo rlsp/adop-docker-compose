@@ -11,8 +11,9 @@
     - `INITIAL_ADMIN_PASSWORD_PLAIN` - The initial user's password.
     - `ADOP_CLI_USER` - The cli user that has administrator access to Jenkins. This can be the `INITIAL_ADMIN_USER`
     - `ADOP_CLI_PASSWORD` - The cli user's password.
+    - `SMTP_DOMAIN` - Your smtp server domain.
     
-    Or better create a script for it.
+    Or better create a script for these and source it.
     
     ```bash
     cat > my-vars.sh <<-EOF
@@ -23,6 +24,7 @@
     export INITIAL_ADMIN_PASSWORD_PLAIN='n0ty0urUserPls!'
     export ADOP_CLI_USER=$INITIAL_ADMIN_USER
     export ADOP_CLI_PASSWORD=$INITIAL_ADMIN_PASSWORD_PLAIN
+    export SMTP_DOMAIN=awsamazon.com
     EOF
     ```
     
