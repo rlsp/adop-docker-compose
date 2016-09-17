@@ -1,5 +1,3 @@
-# To be improved! Current README is only intended for audience with docker and ADOP knowledge.
-
 ## Launching from the Commandline
 
 - Export Container global variables.
@@ -77,3 +75,23 @@
     # Create a sample project using adop cli.
     ./adop project -w MyWorkspace -p MyProject create -a ${INITIAL_ADMIN_USER}@${LDAP_DOMAIN}
     ```
+
+## Configure Jenkins Gitlab connection to enable gitlab web hooks to trigger Jenkins CI/CD pipelines.
+
+ - Get your Gitlab user Private Token.
+
+  - You can get your gitlab user's *Private token* from the Gitlab's page url -  http://ADOPIPADDRESS/gitlab/profile/account. 
+
+  - From the Jenkins Home Page, Go to *Credentials* and create a credentials with the *Gitlab API Token* type using the Account Token of the gitlab user. 
+
+ - Configure Gitlab connection.
+
+  - From the Jenkins Home Page, Go to *Manage Jenkins* >> *Configure System*, search for the Gitlab connection settings.
+
+  ```bash
+  Connection name: ADOP Gitlab
+  Gitlab host URL: http://gitlab/gitlab
+  Credentials: <the gitlab api token credentials you created>
+  ```
+
+  - Test the connection to ensure that Gitlab and Jenkins communicates with each other.
