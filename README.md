@@ -1,4 +1,26 @@
-## Launching from the Commandline
+# General Usage Guide
+## Option 1 - Launch using AWS CloudFormation.
+
+If you have an AWS account, you can get the cloudformation templates here: https://github.com/bzon/adop-cloudformation-template. Use the Single Node version for demo or sandbox environments.
+
+## Option 2 - Launch from the command line.
+
+If you want to launch this manually provided that you have basic knowledge in Linux command line and docker. Follow the steps below.
+
+### System requirements:
+
+**CPU**: 4 Core
+**RAM**: 16 GB
+**Disk Storage**: 100GB
+**Internet connection**
+
+### Linux packages required:
+**docker-engine** v1.10 or higher.  
+**docker-compose** v1.7 or higher.
+**git**
+
+
+### Manual Installation steps:  
 
 - Export Container global variables.
 
@@ -76,6 +98,7 @@
     ./adop project -w MyWorkspace -p MyProject create -a ${INITIAL_ADMIN_USER}@${LDAP_DOMAIN}
     ```
 
+# Post Installation
 ## Configure Jenkins Gitlab connection to enable gitlab web hooks to trigger Jenkins CI/CD pipelines.
 
  - Get your Gitlab user Private Token.
