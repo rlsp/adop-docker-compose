@@ -9,14 +9,14 @@ If you want to launch this manually provided that you have basic knowledge in Li
 
 ### System requirements:
 
-**CPU**: 4 Core
-**RAM**: 16 GB
-**Disk Storage**: 100GB
-**Internet connection**
+**CPU**: 4 Core  
+**RAM**: 16 GB  
+**Disk Storage**: 100GB  
+**Internet connection**  
 
 ### Linux packages required:
 **docker-engine** v1.10 or higher.  
-**docker-compose** v1.7 or higher.
+**docker-compose** v1.7 or higher.  
 **git**
 
 
