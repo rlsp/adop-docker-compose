@@ -29,6 +29,8 @@ ldap:
   net: ${CUSTOM_NETWORK_NAME}
   expose:
     - "389"
+  ports:
+    - "389:389"
   environment:
     INITIAL_ADMIN_USER: ${INITIAL_ADMIN_USER}
     INITIAL_ADMIN_PASSWORD: ${INITIAL_ADMIN_PASSWORD}
