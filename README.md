@@ -1,4 +1,20 @@
-# General Usage Guide
+# Sypnosis
+---
+
+This is a forked project of [Accenture DevOps Platform](https://github.com/accenture/adop-docker-compose) that is extended for the following purposes:
+
+- To use Gitlab instead of Gerrit as the main Git repository to load cartridges and performs CI/CD because we/our clients like Gitlab more.
+- To have a built-in Ansible jenkins slave container.
+- To have a built-in SMTP docker container.  
+- To have a customized Platform Extension with no regard to the original specification due to it's limited extension capability.
+
+Due to the complexity of merging the code how we implemented the above, we decided to forked away this project and planned to collaborate in the future to see what the original ADOP project can re-use.
+
+Here is the front page:  
+![HomePage](https://raw.githubusercontent.com/AccenturePDC/adop-docker-compose/pdc-ext/img/adop_pdc_home_page.png)
+
+# General Installation Guide
+---
 ## Option 1 - Launch using AWS CloudFormation.
 
 If you have an AWS account, you can get the cloudformation templates here: https://github.com/bzon/adop-cloudformation-template. Use the Single Node version for demo or sandbox environments.
