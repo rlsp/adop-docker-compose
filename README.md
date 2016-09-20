@@ -115,6 +115,7 @@ If you want to launch this manually provided that you have basic knowledge in Li
     ```
 
 # Post Installation
+---
 ## Configure Jenkins Gitlab connection to enable gitlab web hooks to trigger Jenkins CI/CD pipelines.
 
  - Get your Gitlab user Private Token.
@@ -134,3 +135,16 @@ If you want to launch this manually provided that you have basic knowledge in Li
   ```
 
   - Test the connection to ensure that Gitlab and Jenkins communicates with each other.
+
+
+## Known Issue
+---
+- Fix for an issue where users will not be able to clone using ssh from Gitlab.  
+
+    ```bash
+    docker exec gitlab sed -i "s/session    required     pam_loginuid.so/session    optional     pam_loginuid.so/" /etc/pam.d/sshd
+    ```
+    Reference:  
+    https://github.com/gitlabhq/gitlabhq/issues/6537  
+    http://www.linuxweblog.com/blogs/sandip/20090203/setloginuid-failed-opening-loginuid 
+
