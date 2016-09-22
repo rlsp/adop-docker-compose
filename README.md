@@ -47,7 +47,7 @@ If you want to launch this manually provided that you have basic knowledge in Li
     - `INITIAL_ADMIN_PASSWORD_PLAIN` - The initial user's password.
     - `ADOP_CLI_USER` - The cli user that has administrator access to Jenkins. This can be the `INITIAL_ADMIN_USER`
     - `ADOP_CLI_PASSWORD` - The cli user's password.
-    - `SMTP_DOMAIN` - Your smtp server domain.
+    - `SMTP_DOMAIN` - Your smtp server domain. 
     
     Or better create a script for these and source it.
     
@@ -61,7 +61,7 @@ If you want to launch this manually provided that you have basic knowledge in Li
     export INITIAL_ADMIN_PASSWORD_PLAIN=beshy123
     export ADOP_CLI_USER=juansmith
     export ADOP_CLI_PASSWORD=beshy123
-    export SMTP_DOMAIN=awsamazon.com
+    export SMTP_DOMAIN=awsamazon.com # IMPORTANT: Use this domain if you are launching this from AWS EC2.
     EOF
     ```
     
