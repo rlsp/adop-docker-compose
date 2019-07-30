@@ -35,7 +35,7 @@ gitlab:
   environment:
     GITLAB_ROOT_PASSWORD: ${PASSWORD_GITLAB}
     GITLAB_OMNIBUS_CONFIG: |
-      external_url 'http://${PUBLIC_IP}/gitlab'
+      external_url = 'http://${PUBLIC_IP}/gitlab'
       gitlab_rails['smtp_enable'] = '${ADOP_SMTP_ENABLED}'
       gitlab_rails['smtp_address'] = 'mail-server'
       gitlab_rails['smtp_port'] = 25
